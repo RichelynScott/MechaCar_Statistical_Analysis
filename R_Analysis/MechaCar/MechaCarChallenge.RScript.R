@@ -21,9 +21,9 @@ lot_summary <- Suspension_Coil_df %>% group_by(Manufacturing_Lot) %>% summarize(
 
 t.test(Suspension_Coil_df$PSI,mu=1500) #complete a t-test for the total summary mean across 3 lots to presumed population means
 
-lot1 <- subset(mecha_coil, Manufacturing_Lot=="Lot1")
-lot2 <- subset(mecha_coil, Manufacturing_Lot=="Lot2")
-lot3 <- subset(mecha_coil, Manufacturing_Lot=="Lot3")
+lot1 <- subset(Suspension_Coil_df, Manufacturing_Lot=="Lot1")
+lot2 <- subset(Suspension_Coil_df, Manufacturing_Lot=="Lot2")
+lot3 <- subset(Suspension_Coil_df, Manufacturing_Lot=="Lot3")
 
 t.test(lot1$PSI,mu=1500)
 t.test(lot2$PSI,mu=1500)
