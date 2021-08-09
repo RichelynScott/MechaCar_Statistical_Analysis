@@ -1,13 +1,15 @@
-library(dplyr) #import deplyr library
+library(dplyr) 
+library(tidyverse)
 
-MechaCar_df <- read.csv(file="/Users/richelynscott/Documents/Home/UCF_Data_Analytics/Mod 15/MechaCar_Statistical_Analysis/R_Analysis/MechaCar/MechaCar_mpg.csv",stringsAsFactors=F) #read the mechacar_mpg csv into a data frame
+# Linear regression to predict MPG
+MechaCar_df <- read.csv(file="/Users/richelynscott/Documents/Home/UCF_Data_Analytics/Mod 15/MechaCar_Statistical_Analysis/R_Analysis/MechaCar/MechaCar_mpg.csv", check.names=F, stringsAsFactors=F)
 
-lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD+mpg,data=MechaCar_df) #perform linear regression for mpg
+lm(mpg ~ vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,data=MechaCar_df) #perform linear regression model for mpg
 
-summary(lm(mpg~vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD+mpg,data=MechaCar_df))
+summary(lm(mpg ~ vehicle_length+vehicle_weight+spoiler_angle+ground_clearance+AWD,data=MechaCar_df))
 #determine p-value and r-squared value
 
-Suspension_Coil_df <- read.csv(file="Suspension_Coil.csv",stringsAsFactors=F) #read the suspension_coil csv into a data frame
+Suspension_Coil_df <- read.csv(file="/Users/richelynscott/Documents/Home/UCF_Data_Analytics/Mod 15/MechaCar_Statistical_Analysis/R_Analysis/MechaCar/Suspension_Coil.csv", check.names=F, stringsAsFactors=F)
 
 total_summary <- Suspension_Coil_df %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI), SD=sd(PSI))
 #create a summary data frame to show mean, median, variance, and standard deviation for PSI
