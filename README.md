@@ -36,4 +36,6 @@ T-Tests on Suspension Coils confirms what we found in the summary statistics abo
 ## Study Design: MechaCar vs Competition
 
 
+In order to quantify how the MechaCar performs against the competition we will think about some metrics that are of high interest to a consumer of today such as fuel efficiency (MPG overall, MPG City, & MPG Highway). We would compare fuel efficiency data for both city and highway and compare our data to that of competitors for vehicles of the same class. The null hypothesis would be that MechaCar’s fuel efficiency will be less than or equal to that of competition and alternative hypothesis would be that MechaCar’s fuel efficiency is greater than that of competition. We would have to use a two sample t-test to compare the fuel efficiency of MechaCar vs Competition, we would use this because A two-sample t-test is used when you want to compare two independent groups to see if their means are different. We would need vast amounts of statistical data on fuel efficiency such as MPG overall, MPG City, & MPG Highway.
+
 
